@@ -10,7 +10,10 @@ const app = express();
 
 await connectCloudinary()
 
-app.use(cors())
+app.use(cors({
+  origin:"*",
+  credentials:true
+}))
 app.use(express.json())
 app.use(clerkMiddleware({
   publishableKey: process.env.CLERK_PUBLISHABLE_KEY,
