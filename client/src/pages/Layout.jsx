@@ -35,7 +35,11 @@ const Layout = () => {
         </div>
     ) : (
         <div className='flex items-center justify-center h-screen'>
-            <SignIn />
+            <SignIn
+            routing = 'path'
+            path = '/'
+            redirect = "/ai"
+            />
         </div>
     )
 }
